@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -69,7 +68,7 @@
                 app:layout_constraintBottom_toBottomOf="@id/starCount"
                 app:layout_constraintStart_toEndOf="@id/icon_star"
                 app:layout_constraintTop_toTopOf="@+id/starCount"
-                tools:text="Star" />
+                android:text="Star" />
 
             <TextView
                 android:id="@+id/starCount"
@@ -84,7 +83,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@id/text_star"
                 app:layout_constraintTop_toTopOf="@id/star_layout"
-                tools:text="99회" />
+                android:text="99회" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -131,7 +130,7 @@
                     app:layout_constraintEnd_toEndOf="@id/level_layout"
                     app:layout_constraintStart_toStartOf="@id/level_layout"
                     app:layout_constraintTop_toTopOf="@id/level_layout"
-                    tools:text="Lv.89" />
+                    android:text="Lv.89" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <ImageView
@@ -156,7 +155,7 @@
                 app:layout_constraintBottom_toBottomOf="@id/profileLayout"
                 app:layout_constraintStart_toEndOf="@id/icon_female"
                 app:layout_constraintTop_toTopOf="@id/profileLayout"
-                tools:text="징구리당당숭당당" />
+                android:text="징구리당당숭당당" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -194,7 +193,7 @@
                     app:layout_constraintEnd_toEndOf="@id/toggle1"
                     app:layout_constraintStart_toStartOf="@id/toggle1"
                     app:layout_constraintTop_toTopOf="@id/toggle1"
-                    tools:text="Content" />
+                    android:text="Content" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -223,7 +222,7 @@
                     app:layout_constraintEnd_toEndOf="@id/toggle2"
                     app:layout_constraintStart_toStartOf="@id/toggle2"
                     app:layout_constraintTop_toTopOf="@id/toggle2"
-                    tools:text="실시간 1위" />
+                    android:text="실시간 1위" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -253,7 +252,7 @@
                     app:layout_constraintEnd_toEndOf="@id/toggle3"
                     app:layout_constraintStart_toStartOf="@id/toggle3"
                     app:layout_constraintTop_toTopOf="@id/toggle3"
-                    tools:text="주간 BJ 2" />
+                    android:text="주간 BJ 2" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -283,7 +282,7 @@
                     app:layout_constraintEnd_toEndOf="@id/toggle4"
                     app:layout_constraintStart_toStartOf="@id/toggle4"
                     app:layout_constraintTop_toTopOf="@id/toggle4"
-                    tools:text="은은한 사랑꾼" />
+                    android:text="은은한 사랑꾼" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -318,7 +317,7 @@
                     app:layout_constraintEnd_toEndOf="@id/followersCountLayout"
                     app:layout_constraintStart_toStartOf="@id/followersCountLayout"
                     app:layout_constraintTop_toTopOf="@id/followersCountLayout"
-                    tools:text="팔로워" />
+                    android:text="팔로워" />
 
                 <TextView
                     android:id="@+id/followersCount"
@@ -334,7 +333,7 @@
                     app:layout_constraintEnd_toEndOf="@id/followersCountLayout"
                     app:layout_constraintStart_toStartOf="@id/followersCountLayout"
                     app:layout_constraintTop_toBottomOf="@id/followersText"
-                    tools:text="99,999" />
+                    android:text="99,999" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -367,7 +366,7 @@
                     app:layout_constraintEnd_toEndOf="@id/followingCountLayout"
                     app:layout_constraintStart_toStartOf="@id/followingCountLayout"
                     app:layout_constraintTop_toTopOf="@id/followingCountLayout"
-                    tools:text="팔로잉" />
+                    android:text="팔로잉" />
 
                 <TextView
                     android:id="@+id/followingCount"
@@ -383,7 +382,7 @@
                     app:layout_constraintEnd_toEndOf="@id/followingCountLayout"
                     app:layout_constraintStart_toStartOf="@id/followingCountLayout"
                     app:layout_constraintTop_toBottomOf="@id/followingText"
-                    tools:text="99,999" />
+                    android:text="99,999" />
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -417,7 +416,7 @@
                     app:layout_constraintEnd_toEndOf="@id/likeCountLayout"
                     app:layout_constraintStart_toStartOf="@id/likeCountLayout"
                     app:layout_constraintTop_toTopOf="@id/likeCountLayout"
-                    tools:text="좋아요" />
+                    android:text="좋아요" />
 
                 <TextView
                     android:id="@+id/likeCount"
@@ -433,7 +432,7 @@
                     app:layout_constraintEnd_toEndOf="@id/likeCountLayout"
                     app:layout_constraintStart_toStartOf="@id/likeCountLayout"
                     app:layout_constraintTop_toBottomOf="@id/likeText"
-                    tools:text="99,999" />
+                    android:text="99,999" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -472,7 +471,7 @@
                     app:layout_constraintEnd_toEndOf="@id/bestFansLayout"
                     app:layout_constraintStart_toStartOf="@id/bestFansLayout"
                     app:layout_constraintTop_toTopOf="@id/bestFansLayout"
-                    tools:text="BEST FANS" />
+                    android:text="BEST FANS" />
 
                 <ImageView
                     android:layout_width="wrap_content"
@@ -585,7 +584,7 @@
                     app:layout_constraintEnd_toStartOf="@id/monthIcon"
                     app:layout_constraintStart_toStartOf="@id/monthChairmanLayout"
                     app:layout_constraintTop_toTopOf="@id/monthChairmanLayout"
-                    tools:text="달회장" />
+                    android:text="달회장" />
 
                 <ImageView
                     android:id="@+id/monthIcon"
@@ -641,7 +640,7 @@
                     app:layout_constraintEnd_toEndOf="@id/kingCupidLayout"
                     app:layout_constraintStart_toStartOf="@id/kingCupidLayout"
                     app:layout_constraintTop_toTopOf="@id/kingCupidLayout"
-                    tools:text="킹큐피드" />
+                    android:text="킹큐피드" />
 
                 <ImageView
                     android:id="@+id/kingCupid"
@@ -683,7 +682,7 @@
                 app:layout_constraintBottom_toBottomOf="@id/teamLayout"
                 app:layout_constraintStart_toStartOf="@id/teamLayout"
                 app:layout_constraintTop_toTopOf="@id/teamLayout"
-                tools:text="TEAM" />
+                android:text="TEAM" />
 
             <ImageView
                 android:id="@+id/teamImage"
@@ -706,7 +705,7 @@
                 app:layout_constraintBottom_toBottomOf="@id/teamLayout"
                 app:layout_constraintStart_toEndOf="@id/teamImage"
                 app:layout_constraintTop_toTopOf="@id/teamLayout"
-                tools:text="우주최강슈퍼파워" />
+                android:text="우주최강슈퍼파워" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -719,7 +718,7 @@
                 app:layout_constraintBottom_toBottomOf="@id/teamLayout"
                 app:layout_constraintEnd_toEndOf="@id/teamLayout"
                 app:layout_constraintTop_toTopOf="@id/teamLayout"
-                tools:text="이달 150위" />
+                android:text="이달 150위" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
