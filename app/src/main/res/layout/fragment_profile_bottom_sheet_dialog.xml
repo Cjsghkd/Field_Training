@@ -3,13 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#202020">
+    android:layout_height="match_parent">
 
     <View
         android:id="@+id/transparentBackground"
         android:layout_width="match_parent"
         android:layout_height="40dp"
+        android:background="@android:color/transparent"
         app:layout_constraintBottom_toTopOf="@id/bottomSheetBackground"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -290,7 +290,7 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/countLayout"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="29dp"
             android:layout_marginTop="16dp"
@@ -303,6 +303,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:layout_constraintStart_toStartOf="@id/countLayout"
+                app:layout_constraintEnd_toStartOf="@id/followingCountLayout"
                 app:layout_constraintTop_toTopOf="@id/countLayout">
 
                 <TextView
@@ -329,9 +330,9 @@
                     android:textColor="#202020"
                     android:textSize="18sp"
                     android:textStyle="normal"
-                    app:layout_constraintBottom_toBottomOf="followersCountLayout"
-                    app:layout_constraintEnd_toEndOf="followersCountLayout"
-                    app:layout_constraintStart_toStartOf="followersCountLayout"
+                    app:layout_constraintBottom_toBottomOf="@id/followersCountLayout"
+                    app:layout_constraintEnd_toEndOf="@id/followersCountLayout"
+                    app:layout_constraintStart_toStartOf="@id/followersCountLayout"
                     app:layout_constraintTop_toBottomOf="@id/followersText"
                     tools:text="99,999" />
 
@@ -350,6 +351,7 @@
                 android:id="@+id/followingCountLayout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                app:layout_constraintEnd_toStartOf="@id/likeCountLayout"
                 app:layout_constraintStart_toEndOf="@id/followersCountLayout"
                 app:layout_constraintTop_toTopOf="@id/countLayout">
 
@@ -361,7 +363,6 @@
                     android:textColor="#666666"
                     android:textSize="12sp"
                     android:textStyle="normal"
-
                     app:layout_constraintBottom_toTopOf="@id/followingCount"
                     app:layout_constraintEnd_toEndOf="@id/followingCountLayout"
                     app:layout_constraintStart_toStartOf="@id/followingCountLayout"
@@ -378,9 +379,9 @@
                     android:textColor="#202020"
                     android:textSize="18sp"
                     android:textStyle="normal"
-                    app:layout_constraintBottom_toBottomOf="followingCountLayout"
-                    app:layout_constraintEnd_toEndOf="followingCountLayout"
-                    app:layout_constraintStart_toStartOf="followingCountLayout"
+                    app:layout_constraintBottom_toBottomOf="@id/followingCountLayout"
+                    app:layout_constraintEnd_toEndOf="@id/followingCountLayout"
+                    app:layout_constraintStart_toStartOf="@id/followingCountLayout"
                     app:layout_constraintTop_toBottomOf="@id/followingText"
                     tools:text="99,999" />
 
@@ -400,6 +401,7 @@
                 android:id="@+id/likeCountLayout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="@id/countLayout"
                 app:layout_constraintStart_toEndOf="@id/followingCountLayout"
                 app:layout_constraintTop_toTopOf="@id/countLayout">
 
@@ -427,9 +429,9 @@
                     android:textColor="#202020"
                     android:textSize="18sp"
                     android:textStyle="normal"
-                    app:layout_constraintBottom_toBottomOf="likeCountLayout"
-                    app:layout_constraintEnd_toEndOf="likeCountLayout"
-                    app:layout_constraintStart_toStartOf="likeCountLayout"
+                    app:layout_constraintBottom_toBottomOf="@id/likeCountLayout"
+                    app:layout_constraintEnd_toEndOf="@id/likeCountLayout"
+                    app:layout_constraintStart_toStartOf="@id/likeCountLayout"
                     app:layout_constraintTop_toBottomOf="@id/likeText"
                     tools:text="99,999" />
 
