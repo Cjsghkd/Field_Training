@@ -1,5 +1,6 @@
 package com.example.publishing_practice
 
+import android.app.Dialog
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -15,7 +16,8 @@ class ProfileBottomSheetDialogFragment : BottomSheetDialogFragment() {
         return inflater.inflate(R.layout.fragment_profile_bottom_sheet_dialog, container, false)
     }
 
-    companion object {
-        const val TAG = "fragment_profile_bottom_sheet_dialog"
+    override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
+        setStyle(STYLE_NORMAL, R.style.TransparentBottomSheetDialogTheme)
+        return super.onCreateDialog(savedInstanceState)
     }
 }

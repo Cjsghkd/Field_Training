@@ -6,4 +6,8 @@
     </style>
 
     <style name="Theme.Publishing_Practice" parent="Base.Theme.Publishing_Practice" />
+
+    <style name="TransparentBottomSheetDialogTheme" parent="Theme.AppCompat.Light">
+        <item name="android:colorBackground">#66202020</item>
+    </style>
 </resources>
