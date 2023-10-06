@@ -4,24 +4,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <View
-        android:id="@+id/transparentBackground"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:background="@android:color/transparent"
-        app:layout_constraintBottom_toTopOf="@id/bottomSheetBackground"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
     <ImageView
         android:id="@+id/profileImage"
         android:layout_width="80dp"
         android:layout_height="80dp"
+        android:layout_marginBottom="-40dp"
         android:src="@drawable/ellipse_7"
         android:translationZ="90dp"
+        app:layout_constraintBottom_toTopOf="@id/bottomSheetBackground"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/transparentBackground" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/bottomSheetBackground"
@@ -36,13 +28,13 @@
             android:id="@+id/star_layout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingStart="5dp"
-            android:paddingEnd="6dp"
-            android:paddingVertical="6dp"
             android:layout_marginStart="12dp"
             android:layout_marginTop="12dp"
             android:background="@drawable/star_background"
             android:gravity="center_vertical"
+            android:paddingVertical="6dp"
+            android:paddingStart="5dp"
+            android:paddingEnd="6dp"
             app:layout_constraintStart_toStartOf="@id/bottomSheetBackground"
             app:layout_constraintTop_toTopOf="@+id/bottomSheetBackground">
 
@@ -62,13 +54,13 @@
                 android:layout_marginStart="1dp"
                 android:fontFamily="sans-serif-medium"
                 android:lineSpacingExtra="19sp"
+                android:text="Star"
                 android:textColor="#ffffff"
                 android:textSize="12sp"
                 android:textStyle="italic"
                 app:layout_constraintBottom_toBottomOf="@id/starCount"
                 app:layout_constraintStart_toEndOf="@id/icon_star"
-                app:layout_constraintTop_toTopOf="@+id/starCount"
-                android:text="Star" />
+                app:layout_constraintTop_toTopOf="@+id/starCount" />
 
             <TextView
                 android:id="@+id/starCount"
@@ -76,14 +68,14 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="3dp"
                 android:letterSpacing="-0.02"
+                android:text="99회"
                 android:textColor="#ffffff"
                 android:textSize="12sp"
                 android:textStyle="normal"
                 app:layout_constraintBottom_toBottomOf="@id/star_layout"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@id/text_star"
-                app:layout_constraintTop_toTopOf="@id/star_layout"
-                android:text="99회" />
+                app:layout_constraintTop_toTopOf="@id/star_layout" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -123,14 +115,14 @@
                     android:layout_marginHorizontal="5dp"
                     android:letterSpacing="-0.03"
                     android:lineSpacingExtra="8sp"
+                    android:text="Lv.89"
                     android:textColor="#ffffff"
                     android:textSize="12sp"
                     android:textStyle="normal"
                     app:layout_constraintBottom_toBottomOf="@id/level_layout"
                     app:layout_constraintEnd_toEndOf="@id/level_layout"
                     app:layout_constraintStart_toStartOf="@id/level_layout"
-                    app:layout_constraintTop_toTopOf="@id/level_layout"
-                    android:text="Lv.89" />
+                    app:layout_constraintTop_toTopOf="@id/level_layout" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <ImageView
@@ -149,13 +141,13 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="4dp"
                 android:letterSpacing="-0.03"
+                android:text="징구리당당숭당당"
                 android:textColor="#202020"
                 android:textSize="18sp"
                 android:textStyle="normal"
                 app:layout_constraintBottom_toBottomOf="@id/profileLayout"
                 app:layout_constraintStart_toEndOf="@id/icon_female"
-                app:layout_constraintTop_toTopOf="@id/profileLayout"
-                android:text="징구리당당숭당당" />
+                app:layout_constraintTop_toTopOf="@id/profileLayout" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -186,14 +178,14 @@
                     android:layout_marginHorizontal="5dp"
                     android:fontFamily="sans-serif"
                     android:lineSpacingExtra="4sp"
+                    android:text="Content"
                     android:textColor="#ffffff"
                     android:textSize="12sp"
                     android:textStyle="italic"
                     app:layout_constraintBottom_toBottomOf="@id/toggle1"
                     app:layout_constraintEnd_toEndOf="@id/toggle1"
                     app:layout_constraintStart_toStartOf="@id/toggle1"
-                    app:layout_constraintTop_toTopOf="@id/toggle1"
-                    android:text="Content" />
+                    app:layout_constraintTop_toTopOf="@id/toggle1" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -215,14 +207,14 @@
                     android:layout_marginHorizontal="5dp"
                     android:gravity="center_horizontal"
                     android:lineSpacingExtra="-3sp"
+                    android:text="실시간 1위"
                     android:textColor="#ffffff"
                     android:textSize="10sp"
                     android:textStyle="normal"
                     app:layout_constraintBottom_toBottomOf="@id/toggle2"
                     app:layout_constraintEnd_toEndOf="@id/toggle2"
                     app:layout_constraintStart_toStartOf="@id/toggle2"
-                    app:layout_constraintTop_toTopOf="@id/toggle2"
-                    android:text="실시간 1위" />
+                    app:layout_constraintTop_toTopOf="@id/toggle2" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -245,14 +237,14 @@
                     android:gravity="center_horizontal"
                     android:letterSpacing="-0.05"
                     android:lineSpacingExtra="5sp"
+                    android:text="주간 BJ 2"
                     android:textColor="#ffffff"
                     android:textSize="10sp"
                     android:textStyle="normal"
                     app:layout_constraintBottom_toBottomOf="@id/toggle3"
                     app:layout_constraintEnd_toEndOf="@id/toggle3"
                     app:layout_constraintStart_toStartOf="@id/toggle3"
-                    app:layout_constraintTop_toTopOf="@id/toggle3"
-                    android:text="주간 BJ 2" />
+                    app:layout_constraintTop_toTopOf="@id/toggle3" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -275,14 +267,14 @@
                     android:gravity="center_horizontal"
                     android:letterSpacing="-0.05"
                     android:lineSpacingExtra="5sp"
+                    android:text="은은한 사랑꾼"
                     android:textColor="#ffffff"
                     android:textSize="10sp"
                     android:textStyle="normal"
                     app:layout_constraintBottom_toBottomOf="@id/toggle4"
                     app:layout_constraintEnd_toEndOf="@id/toggle4"
                     app:layout_constraintStart_toStartOf="@id/toggle4"
-                    app:layout_constraintTop_toTopOf="@id/toggle4"
-                    android:text="은은한 사랑꾼" />
+                    app:layout_constraintTop_toTopOf="@id/toggle4" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -301,8 +293,8 @@
                 android:id="@+id/followersCountLayout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:layout_constraintStart_toStartOf="@id/countLayout"
                 app:layout_constraintEnd_toStartOf="@id/followingCountLayout"
+                app:layout_constraintStart_toStartOf="@id/countLayout"
                 app:layout_constraintTop_toTopOf="@id/countLayout">
 
                 <TextView
@@ -310,14 +302,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal"
+                    android:text="팔로워"
                     android:textColor="#666666"
                     android:textSize="12sp"
                     android:textStyle="normal"
                     app:layout_constraintBottom_toTopOf="@id/followersCount"
                     app:layout_constraintEnd_toEndOf="@id/followersCountLayout"
                     app:layout_constraintStart_toStartOf="@id/followersCountLayout"
-                    app:layout_constraintTop_toTopOf="@id/followersCountLayout"
-                    android:text="팔로워" />
+                    app:layout_constraintTop_toTopOf="@id/followersCountLayout" />
 
                 <TextView
                     android:id="@+id/followersCount"
@@ -326,14 +318,14 @@
                     android:layout_marginTop="6dp"
                     android:gravity="center_horizontal"
                     android:paddingHorizontal="21dp"
+                    android:text="99,999"
                     android:textColor="#202020"
                     android:textSize="18sp"
                     android:textStyle="normal"
                     app:layout_constraintBottom_toBottomOf="@id/followersCountLayout"
                     app:layout_constraintEnd_toEndOf="@id/followersCountLayout"
                     app:layout_constraintStart_toStartOf="@id/followersCountLayout"
-                    app:layout_constraintTop_toBottomOf="@id/followersText"
-                    android:text="99,999" />
+                    app:layout_constraintTop_toBottomOf="@id/followersText" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -359,14 +351,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal"
+                    android:text="팔로잉"
                     android:textColor="#666666"
                     android:textSize="12sp"
                     android:textStyle="normal"
                     app:layout_constraintBottom_toTopOf="@id/followingCount"
                     app:layout_constraintEnd_toEndOf="@id/followingCountLayout"
                     app:layout_constraintStart_toStartOf="@id/followingCountLayout"
-                    app:layout_constraintTop_toTopOf="@id/followingCountLayout"
-                    android:text="팔로잉" />
+                    app:layout_constraintTop_toTopOf="@id/followingCountLayout" />
 
                 <TextView
                     android:id="@+id/followingCount"
@@ -375,14 +367,14 @@
                     android:layout_marginTop="6dp"
                     android:gravity="center_horizontal"
                     android:paddingHorizontal="21dp"
+                    android:text="99,999"
                     android:textColor="#202020"
                     android:textSize="18sp"
                     android:textStyle="normal"
                     app:layout_constraintBottom_toBottomOf="@id/followingCountLayout"
                     app:layout_constraintEnd_toEndOf="@id/followingCountLayout"
                     app:layout_constraintStart_toStartOf="@id/followingCountLayout"
-                    app:layout_constraintTop_toBottomOf="@id/followingText"
-                    android:text="99,999" />
+                    app:layout_constraintTop_toBottomOf="@id/followingText" />
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -409,14 +401,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal"
+                    android:text="좋아요"
                     android:textColor="#666666"
                     android:textSize="12sp"
                     android:textStyle="normal"
                     app:layout_constraintBottom_toTopOf="@id/likeCount"
                     app:layout_constraintEnd_toEndOf="@id/likeCountLayout"
                     app:layout_constraintStart_toStartOf="@id/likeCountLayout"
-                    app:layout_constraintTop_toTopOf="@id/likeCountLayout"
-                    android:text="좋아요" />
+                    app:layout_constraintTop_toTopOf="@id/likeCountLayout" />
 
                 <TextView
                     android:id="@+id/likeCount"
@@ -425,14 +417,14 @@
                     android:layout_marginTop="6dp"
                     android:gravity="center_horizontal"
                     android:paddingHorizontal="21dp"
+                    android:text="99,999"
                     android:textColor="#202020"
                     android:textSize="18sp"
                     android:textStyle="normal"
                     app:layout_constraintBottom_toBottomOf="@id/likeCountLayout"
                     app:layout_constraintEnd_toEndOf="@id/likeCountLayout"
                     app:layout_constraintStart_toStartOf="@id/likeCountLayout"
-                    app:layout_constraintTop_toBottomOf="@id/likeText"
-                    android:text="99,999" />
+                    app:layout_constraintTop_toBottomOf="@id/likeText" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -465,13 +457,13 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:lineSpacingExtra="5sp"
+                    android:text="BEST FANS"
                     android:textColor="#464646"
                     android:textSize="12sp"
                     android:textStyle="normal"
                     app:layout_constraintEnd_toEndOf="@id/bestFansLayout"
                     app:layout_constraintStart_toStartOf="@id/bestFansLayout"
-                    app:layout_constraintTop_toTopOf="@id/bestFansLayout"
-                    android:text="BEST FANS" />
+                    app:layout_constraintTop_toTopOf="@id/bestFansLayout" />
 
                 <ImageView
                     android:layout_width="wrap_content"
@@ -578,13 +570,13 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="14dp"
                     android:lineSpacingExtra="5sp"
+                    android:text="달회장"
                     android:textColor="#464646"
                     android:textSize="12sp"
                     android:textStyle="normal"
                     app:layout_constraintEnd_toStartOf="@id/monthIcon"
                     app:layout_constraintStart_toStartOf="@id/monthChairmanLayout"
-                    app:layout_constraintTop_toTopOf="@id/monthChairmanLayout"
-                    android:text="달회장" />
+                    app:layout_constraintTop_toTopOf="@id/monthChairmanLayout" />
 
                 <ImageView
                     android:id="@+id/monthIcon"
@@ -634,13 +626,13 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:lineSpacingExtra="5sp"
+                    android:text="킹큐피드"
                     android:textColor="#464646"
                     android:textSize="12sp"
                     android:textStyle="normal"
                     app:layout_constraintEnd_toEndOf="@id/kingCupidLayout"
                     app:layout_constraintStart_toStartOf="@id/kingCupidLayout"
-                    app:layout_constraintTop_toTopOf="@id/kingCupidLayout"
-                    android:text="킹큐피드" />
+                    app:layout_constraintTop_toTopOf="@id/kingCupidLayout" />
 
                 <ImageView
                     android:id="@+id/kingCupid"
@@ -676,13 +668,13 @@
                 android:layout_marginStart="12dp"
                 android:letterSpacing="-0.03"
                 android:lineSpacingExtra="5sp"
+                android:text="TEAM"
                 android:textColor="#464646"
                 android:textSize="12sp"
                 android:textStyle="normal"
                 app:layout_constraintBottom_toBottomOf="@id/teamLayout"
                 app:layout_constraintStart_toStartOf="@id/teamLayout"
-                app:layout_constraintTop_toTopOf="@id/teamLayout"
-                android:text="TEAM" />
+                app:layout_constraintTop_toTopOf="@id/teamLayout" />
 
             <ImageView
                 android:id="@+id/teamImage"
@@ -699,26 +691,26 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="6dp"
                 android:lineSpacingExtra="4sp"
+                android:text="우주최강슈퍼파워"
                 android:textColor="#202020"
                 android:textSize="13sp"
                 android:textStyle="normal"
                 app:layout_constraintBottom_toBottomOf="@id/teamLayout"
                 app:layout_constraintStart_toEndOf="@id/teamImage"
-                app:layout_constraintTop_toTopOf="@id/teamLayout"
-                android:text="우주최강슈퍼파워" />
+                app:layout_constraintTop_toTopOf="@id/teamLayout" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="12dp"
                 android:gravity="center_horizontal"
+                android:text="이달 150위"
                 android:textColor="#666666"
                 android:textSize="11sp"
                 android:textStyle="normal"
                 app:layout_constraintBottom_toBottomOf="@id/teamLayout"
                 app:layout_constraintEnd_toEndOf="@id/teamLayout"
-                app:layout_constraintTop_toTopOf="@id/teamLayout"
-                android:text="이달 150위" />
+                app:layout_constraintTop_toTopOf="@id/teamLayout" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
