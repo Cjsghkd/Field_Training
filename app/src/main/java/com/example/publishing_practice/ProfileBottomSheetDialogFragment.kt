@@ -8,9 +8,9 @@ import android.view.ViewGroup
 import com.example.publishing_practice.databinding.FragmentProfileBottomSheetDialogBinding
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 
-private lateinit var binding: FragmentProfileBottomSheetDialogBinding
-
 class ProfileBottomSheetDialogFragment : BottomSheetDialogFragment() {
+    private lateinit var binding: FragmentProfileBottomSheetDialogBinding
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
