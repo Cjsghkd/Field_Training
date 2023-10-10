@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:icon="@drawable/footer_live"
+        android:title="live" />
+
+    <item
+        android:icon="@drawable/footer_clip_d"
+        android:title="clip_d" />
+
+    <item
+        android:icon="@drawable/footer_plus"
+        android:title="plus" />
+
+    <item
+        android:icon="@drawable/footer_search_d"
+        android:title="search_d" />
+
+    <item
+        android:icon="@drawable/footer_my_d"
+        android:title="my_d" />
+
+</menu>
