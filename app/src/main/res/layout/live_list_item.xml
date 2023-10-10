@@ -6,6 +6,7 @@
     android:layout_marginBottom="12dp">
 
     <ImageView
+        android:layout_marginStart="16dp"
         android:id="@+id/background"
         android:layout_width="112dp"
         android:layout_height="112dp"
@@ -49,6 +50,14 @@
         android:textSize="13sp"
         android:textColor="#666666"
         android:text="쏭디제이"/>
+
+    <ImageView
+        android:id="@+id/rank"
+        android:layout_width="150dp"
+        android:layout_height="90dp"
+        android:src="@drawable/ani_time_01"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/people_img"
