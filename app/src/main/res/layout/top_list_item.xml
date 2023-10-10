@@ -5,23 +5,36 @@
     android:layout_height="wrap_content"
     android:layout_marginEnd="8dp">
 
-    <ImageView
-        android:id="@+id/background"
-        android:layout_width="116dp"
-        android:layout_height="154dp"
-        android:scaleType="centerCrop"
-        android:src="@drawable/main_one_background"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/background_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:cardCornerRadius="8dp">
+
+            <ImageView
+                android:id="@+id/background"
+                android:layout_width="116dp"
+                android:layout_height="154dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/main_one_background"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <ImageView
         android:id="@+id/mini_icon"
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:src="@drawable/btn_mini_live"
-        app:layout_constraintStart_toStartOf="@id/background"
-        app:layout_constraintTop_toTopOf="@id/background" />
+        app:layout_constraintStart_toStartOf="@id/background_layout"
+        app:layout_constraintTop_toTopOf="@id/background_layout" />
 
     <ImageView
         android:id="@+id/rank"
@@ -30,8 +43,8 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:src="@drawable/number_w_1"
-        app:layout_constraintBottom_toBottomOf="@id/background"
-        app:layout_constraintEnd_toEndOf="@id/background" />
+        app:layout_constraintBottom_toBottomOf="@id/background_layout"
+        app:layout_constraintEnd_toEndOf="@id/background_layout" />
 
     <TextView
         android:id="@+id/name"
@@ -44,8 +57,8 @@
         android:textColor="#303030"
         android:textSize="15sp"
         android:textStyle="normal"
-        app:layout_constraintEnd_toEndOf="@id/background"
-        app:layout_constraintStart_toStartOf="@id/background"
-        app:layout_constraintTop_toBottomOf="@id/background" />
+        app:layout_constraintEnd_toEndOf="@id/background_layout"
+        app:layout_constraintStart_toStartOf="@id/background_layout"
+        app:layout_constraintTop_toBottomOf="@id/background_layout" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
