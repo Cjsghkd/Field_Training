@@ -91,8 +91,10 @@
                     android:id="@+id/online_one"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
+                    app:layout_constraintHorizontal_chainStyle="spread_inside"
                     android:src="@drawable/online_bj_background"
                     app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/online_two"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <ImageView
@@ -131,8 +133,8 @@
                     android:id="@+id/online_two"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
-                    android:layout_marginStart="12dp"
                     android:src="@drawable/online_bj_background"
+                    app:layout_constraintEnd_toStartOf="@id/offline_three"
                     app:layout_constraintStart_toEndOf="@id/online_one"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -172,7 +174,7 @@
                     android:id="@+id/offline_three"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
-                    android:layout_marginStart="12dp"
+                    app:layout_constraintEnd_toStartOf="@id/offline_four"
                     android:src="@drawable/offline_bj_background"
                     app:layout_constraintStart_toEndOf="@id/online_two"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -213,7 +215,7 @@
                     android:id="@+id/offline_four"
                     android:layout_width="70dp"
                     android:layout_height="70dp"
-                    android:layout_marginStart="12dp"
+                    app:layout_constraintEnd_toEndOf="parent"
                     android:src="@drawable/etc_bj_background"
                     app:layout_constraintStart_toEndOf="@id/offline_three"
                     app:layout_constraintTop_toTopOf="parent" />
