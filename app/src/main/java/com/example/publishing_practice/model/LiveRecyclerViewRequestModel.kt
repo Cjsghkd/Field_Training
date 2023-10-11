@@ -5,6 +5,7 @@ data class LiveRecyclerViewRequestModel(
     val gender: Int,
     val heart: Int,
     val rank: Int? = null,
+    val miniIcon: Int? = null,
     val title: String,
     val name: String,
     val peopleCount: String,

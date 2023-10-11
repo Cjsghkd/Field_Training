@@ -30,6 +30,7 @@ class LiveBjAdapter(var itemList: List<LiveRecyclerViewRequestModel>): RecyclerV
             Glide.with(itemView).load(item.gender).into(binding.genderImg)
             Glide.with(itemView).load(item.heart).into(binding.heartImg)
             Glide.with(itemView).load(item.rank).into(binding.rank)
+            Glide.with(itemView).load(item.miniIcon).into(binding.liveMiniIcon)
             binding.title.text = item.title
             binding.name.text = item.name
             binding.peopleCount.text = item.peopleCount
