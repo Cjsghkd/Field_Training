@@ -1,5 +1,6 @@
 package com.example.publishing_practice
 
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -146,6 +147,47 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         initRecyclerView()
+
+        binding.scrollView.setOnScrollChangeListener { _, _, scrollY, _, _ ->
+            when(scrollY) {
+                in 0..369 -> {
+                    binding.toolBar.setBackgroundColor(Color.TRANSPARENT)
+                    binding.iconLayout.setImageResource(R.drawable.ico_set)
+                    binding.dallaLogo.alpha = 0f
+                    binding.iconLayout.alpha = 1f
+                }
+                in 370..425 -> {
+                    binding.toolBar.setBackgroundColor(Color.parseColor("#33FFFFFF"))
+                    binding.iconLayout.setImageResource(R.drawable.ico_set_black)
+                    binding.dallaLogo.alpha = 0.2f
+                    binding.iconLayout.alpha = 0.2f
+                }
+                in 426..570 -> {
+                    binding.toolBar.setBackgroundColor(Color.parseColor("#66FFFFFF"))
+                    binding.iconLayout.setImageResource(R.drawable.ico_set_black)
+                    binding.dallaLogo.alpha = 0.4f
+                    binding.iconLayout.alpha = 0.4f
+                }
+                in 571..650 -> {
+                    binding.toolBar.setBackgroundColor(Color.parseColor("#99FFFFFF"))
+                    binding.iconLayout.setImageResource(R.drawable.ico_set_black)
+                    binding.dallaLogo.alpha = 0.6f
+                    binding.iconLayout.alpha = 0.6f
+                }
+                in 651..750 -> {
+                    binding.toolBar.setBackgroundColor(Color.parseColor("#CCFFFFFF"))
+                    binding.iconLayout.setImageResource(R.drawable.ico_set_black)
+                    binding.dallaLogo.alpha = 0.8f
+                    binding.iconLayout.alpha = 0.8f
+                }
+                else -> {
+                    binding.toolBar.setBackgroundColor(Color.parseColor("#FFFFFFFF"))
+                    binding.iconLayout.setImageResource(R.drawable.ico_set_black)
+                    binding.dallaLogo.alpha = 1f
+                    binding.iconLayout.alpha = 1f
+                }
+            }
+        }
 
 //        binding.button.setOnClickListener {
 //            ProfileBottomSheetDialogFragment().show(supportFragmentManager, "BottomSheet")
