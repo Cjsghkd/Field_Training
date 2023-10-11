@@ -480,6 +480,7 @@
                 app:layout_constraintTop_toBottomOf="@id/live_text"
                 app:tabIndicatorColor="#ff3c7b"
                 app:tabIndicatorHeight="5dp"
+                app:tabRippleColor="@null"
                 app:tabSelectedTextColor="#202020"
                 app:tabTextColor="#acacac">
 
