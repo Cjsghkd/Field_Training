@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="liveList"
+            type="com.example.model.model.model.room.RoomModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="16dp"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <ImageView
+                android:id="@+id/background"
+                android:layout_width="112dp"
+                android:layout_height="112dp"
+                android:scaleType="centerCrop"
+                app:roundImageUrl="@{liveList.bjProfileImage}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/toggle"
+                android:layout_width="wrap_content"
+                android:layout_height="18dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/bdg_contents"
+                app:layout_constraintStart_toEndOf="@id/background"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/title_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="4dp"
+                app:layout_constraintStart_toEndOf="@id/background"
+                app:layout_constraintTop_toBottomOf="@id/toggle"
+                app:layout_goneMarginTop="8dp">
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/suit_semibold"
+                    android:lineSpacingExtra="3sp"
+                    android:text="@{liveList.roomTitle}"
+                    android:textColor="#303030"
+                    android:textSize="15sp"
+                    android:textStyle="normal"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@id/people_img"
+                app:layout_constraintBottom_toTopOf="@id/people_img"
+                android:layout_marginBottom="6dp">
+
+                <ImageView
+                    android:id="@+id/medal_img"
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    app:imageUrl="@{liveList.teamMedalUrl}"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/gender_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/medal_img"
+                    app:layout_goneMarginStart="0dp">
+
+                    <ImageView
+                        android:id="@+id/gender_img"
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:src="@drawable/ico_female"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:letterSpacing="-0.03"
+                    android:id="@+id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:text="@{liveList.bjNickName}"
+                    android:includeFontPadding="false"
+                    android:textColor="#666666"
+                    android:textSize="13sp"
+                    android:textStyle="normal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/gender_layout"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <ImageView
+                android:id="@+id/people_img"
+                android:layout_width="17dp"
+                android:layout_height="17dp"
+                android:layout_marginBottom="8dp"
+                android:src="@drawable/people_g_s"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@id/title_layout" />
+
+            <TextView
+                android:id="@+id/people_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/suit"
+                android:lineSpacingExtra="13sp"
+                android:text="@{Integer.toString(liveList.countLiveMem)}"
+                android:textColor="#999999"
+                android:textSize="13sp"
+                android:textStyle="normal"
+                app:layout_constraintBottom_toBottomOf="@id/people_img"
+                app:layout_constraintStart_toEndOf="@id/people_img"
+                app:layout_constraintTop_toTopOf="@id/people_img" />
+
+            <ImageView
+                android:id="@+id/heart_img"
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:layout_marginStart="8dp"
+                android:src="@drawable/heart"
+                app:layout_constraintBottom_toBottomOf="@id/people_img"
+                app:layout_constraintStart_toEndOf="@id/people_count"
+                app:layout_constraintTop_toTopOf="@id/people_img" />
+
+            <TextView
+                android:id="@+id/heart_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/suit"
+                android:lineSpacingExtra="13sp"
+                android:text="@{Integer.toString(liveList.countGood)}"
+                android:textColor="#999999"
+                android:textSize="13sp"
+                android:textStyle="normal"
+                app:layout_constraintBottom_toBottomOf="@id/heart_img"
+                app:layout_constraintStart_toEndOf="@id/heart_img"
+                app:layout_constraintTop_toTopOf="@id/heart_img" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageView
+            android:id="@+id/live_mini_icon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/ico_video"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/rank"
+            android:layout_width="150dp"
+            android:layout_height="90dp"
+            android:src="@drawable/ani_time_01"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

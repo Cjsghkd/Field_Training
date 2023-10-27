@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="mainBanner"
+            type="com.example.model.model.model.main_banner.MainBannerModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/background"
+            android:layout_width="match_parent"
+            android:layout_height="360dp"
+            android:scaleType="centerCrop"
+            app:imageUrl="@{mainBanner.thumbnailUrl}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/introduction_text_background"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="13dp"
+            app:layout_constraintBottom_toBottomOf="@id/background"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <ImageView
+                android:id="@+id/toggle"
+                android:layout_width="45dp"
+                android:layout_height="18dp"
+                android:layout_marginTop="13dp"
+                android:src="@drawable/bdg_star"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/introduction_text"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/suit_semibold"
+                android:letterSpacing="-0.03"
+                android:lineSpacingExtra="6sp"
+                android:text="@{mainBanner.title}"
+                android:textColor="#202020"
+                android:textSize="24sp"
+                android:textStyle="normal"
+                app:layout_constraintStart_toStartOf="@id/toggle"
+                app:layout_constraintTop_toBottomOf="@id/toggle" />
+
+            <TextView
+                android:id="@+id/user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:fontFamily="@font/suit"
+                android:letterSpacing="-0.03"
+                android:text="@{mainBanner.mem_nick}"
+                android:textColor="#202020"
+                android:textSize="14sp"
+                android:textStyle="normal"
+                app:layout_constraintStart_toStartOf="@id/toggle"
+                app:layout_constraintTop_toBottomOf="@id/introduction_text" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

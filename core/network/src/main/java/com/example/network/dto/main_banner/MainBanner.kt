@@ -1,0 +1,32 @@
+package com.example.network.dto.main_banner
+
+data class MainBanner(
+    val mem_no: String,
+    val subject_type: String,
+    val idx: Int,
+    val buttonNm: String,
+    val type_image: Int,
+    val thumbsUrl: String,
+    val risingYn: String,
+    val image_profile: String,
+    val thumbnailUrl: String,
+    val contents: String,
+    val mem_nick: String,
+    val title: String,
+    val is_cookie: Int,
+    val image_background: String,
+    val badgeSpecial: Int,
+    val linkUrl: String,
+    val popup_type: Int,
+    val is_title_view: Int,
+    val mem_sex: String,
+    val conDjYn: Int,
+    val is_button_view: Int,
+    val room_no: String,
+    val imageProfile: ImageProfile,
+    val badgeNewdj: Int,
+    val bjGradeBadgeList: BjGradeBadgeList,
+    val linkType: String,
+    val djGrade: String,
+    val bannerUrl: String
+)
