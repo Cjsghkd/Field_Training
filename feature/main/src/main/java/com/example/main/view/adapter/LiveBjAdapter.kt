@@ -21,9 +21,6 @@ internal class LiveBjAdapter(var itemList: List<RoomModel>): RecyclerView.Adapte
     class ViewHolder(val binding: LiveListItemBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(item: RoomModel) {
             binding.liveList = item
-
-            visibilityImage(image = item.toggle, imageView = binding.toggle)
-            visibilityImage(image = item.teamMedalUrl, imageView = binding.medalImg)
         }
     }
 }

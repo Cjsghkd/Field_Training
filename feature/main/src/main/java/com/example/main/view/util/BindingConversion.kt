@@ -1,5 +1,6 @@
 package com.example.main.view.util
 
+import android.view.View
 import android.widget.ImageView
 import androidx.databinding.BindingAdapter
 import com.bumptech.glide.Glide
@@ -62,5 +63,11 @@ object BindingConversion {
             2 -> { Glide.with(imageView.context).load(R.drawable.ani_time_02).into(imageView) }
             3 -> { Glide.with(imageView.context).load(R.drawable.ani_time_03).into(imageView) }
         }
+    }
+
+    @BindingAdapter("visibilityImage")
+    @JvmStatic
+    fun <T> loadVisibilityImage(imageView: ImageView, image: T?) {
+        if (image == null) imageView.visibility = View.GONE
     }
 }

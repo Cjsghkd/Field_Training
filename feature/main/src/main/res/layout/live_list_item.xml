@@ -34,7 +34,7 @@
                 android:layout_height="18dp"
                 android:layout_marginStart="12dp"
                 android:layout_marginTop="8dp"
-                android:src="@drawable/bdg_contents"
+                app:visibilityImage="@{liveList.toggle}"
                 app:layout_constraintStart_toEndOf="@id/background"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -75,6 +75,7 @@
                     android:layout_width="14dp"
                     android:layout_height="14dp"
                     app:imageUrl="@{liveList.teamMedalUrl}"
+                    app:visibilityImage="@{liveList.teamMedalUrl}"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintStart_toStartOf="parent" />
