@@ -5,7 +5,6 @@ import android.util.AttributeSet
 import android.view.View
 import android.view.ViewTreeObserver
 import androidx.core.widget.NestedScrollView
-import com.example.main.view.main.DallaMainViewModel
 
 internal class StickyScrollView : NestedScrollView, ViewTreeObserver.OnGlobalLayoutListener {
 
@@ -29,7 +28,6 @@ internal class StickyScrollView : NestedScrollView, ViewTreeObserver.OnGlobalLay
     override fun onGlobalLayout() {
         headerInitPosition = header?.top?.toFloat() ?: 0f
         appbarHeight = appbar?.bottom?.toFloat() ?: 0f
-
     }
 
     override fun onScrollChanged(l: Int, t: Int, oldl: Int, oldt: Int) {
